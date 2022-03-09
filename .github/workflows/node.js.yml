@@ -33,7 +33,7 @@ jobs:
     # uses: wangyucode/sftp-upload-action@24f8bb83383dc39bed201ee5da01475e6c38c568
       uses: sebastianpopp/ftp-action@v2.0.0
       with:
-        host: "124.221.95.189:22"  #你的nginx服务器公网ip
+        host: "124.221.95.189:21"  #你的nginx服务器公网ip
         user: "root" #你的nginx服务器用户名
         password: "Yang3363787543" #你的nginx服务器密码
         localDir: "dist" #你vue项目build好的文件的路径,每次服务器上会自动删除对应的文件夹后重新覆盖
