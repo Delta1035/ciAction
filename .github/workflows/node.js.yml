@@ -33,10 +33,10 @@ jobs:
     # uses: wangyucode/sftp-upload-action@24f8bb83383dc39bed201ee5da01475e6c38c568
       uses: sebastianpopp/ftp-action@v2.0.0
       with:
-        host: '124.221.95.189:21'  #你的nginx服务器公网ip
-        user: 'delta' #你的nginx服务器用户名
-        password: '3363787543' #你的nginx服务器密码
+        host: ${{ secrets.D_FTP_IP__PORT }}  #你的nginx服务器公网ip
+        user: ${{ secrets.D_USERNAME }} #你的nginx服务器用户名
+        password: ${{ secrets.D_PASSWORD }} #你的nginx服务器密码
         localDir: "dist" #你vue项目build好的文件的路径,每次服务器上会自动删除对应的文件夹后重新覆盖
-        remoteDir: "/www/wwwroot/delta" #你要把你build好的文件夹放到nginx服务器上的什么位置
+        remoteDir: "blog" #你要把你build好的文件夹放到nginx服务器上的什么位置
 
 
